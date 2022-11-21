@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>incheol's</title>
+    <style>
+        input {
+            margin-top: 15px;
+        }
+        button{
+            margin-top: 15px;
+        }
+        select{
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h1>inchoel's 과제!</h1>
+        <fieldset>
+            <legend id="user">납품자 정보</legend>
+            <!-- ul쓰면 앞에 땡그라미,,, -->
+            <!-- ol쓰면 앞에 숫자... -->
+          <ol>
+            <li>
+            납품자명(필수):
+            <input type="text" id="username" name="username" maxlength="10" required>
+            </li>
+            <li>
+                e-mail(필수): </label>
+                <input type="email" name="userEmail" id="userEmail" placeholder="abcde@naver.com" maxlength="30" required>
+            </li>
+            <li>
+                홈페이지: </label>
+                <input type="url" name="homepage", id="homepage" placeholder="http://" value="http://" maxlength="30", required>
+            </li>
+            <li>
+                지역:
+                <select name="location">
+                    <optgroup label="한국">
+                        <option value="seoul">서울</option>
+                        <option value="busan">부산</option>
+                    </optgroup>
+                    <optgroup label="중국">
+                        <option value="beijing">북경</option>
+                        <option value="shanghai">상해</option>
+                    </optgroup>
+                </select>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+            <!-- ul쓰면 앞에 땡그라미,,, -->
+            <!-- ol쓰면 앞에 숫자... -->
+            <legend>납품 정보</legend>
+           <ul>
+            <li>
+                상품명(필수):
+                <input type="text" id="productname" name="productname" maxlength="20" required>
+            </li>
+            <li>
+                납품수량(필수):
+            <input type="number" id="productcnt" name="productcnt" maxlength="20" required placeholder="최소 100">
+            </li>
+            <li>
+                <label for="score">납품등급(필수): </label>
+                <input type="range" name="score" id="score" min="0" max="100" step="5" oninput="console.log(this.value)"> 
+            </li>
+            <li>
+                <label for="memo">기타사항:</label>
+                <textarea name="memo" id="memo" cols="20" rows="2"></textarea>
+            </li>
+           <ul>
+        </fieldset>
+        <button type="submit">send message</button>
+
+    </form>
+</body>
+</html>
